@@ -1,0 +1,376 @@
+@charset "UTF-8";
+
+/**
+ *
+ * @authors wang
+ * @date    2016-12-07 21:37:15
+ * @version 1.0.0
+ */
+
+/*统一浏览器样式*/
+
+html,
+body,
+div,
+span,
+input,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption,
+tfoot,
+thead,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+a.box {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline: 0;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a.box {
+    display: block;
+}
+
+html {
+    font-size: 100px;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #ebebeb;
+    font-size: 0.12rem;
+    font-family: 'PingFangSC-Regular', 'Microsoft Yahei';
+    color: #222;
+    -webkit-overflow-scrolling: touch;
+}
+
+div:after,
+div:before,
+input:active,
+input:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+    outline: none;
+    -webkit-appearance: none;
+    /*去掉苹果的默认UI来渲染按钮*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i,
+em {
+    font-weight: normal;
+    font-style: normal;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+img {
+    display: block;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+table {
+    border-spacing: 0;
+}
+
+tbody,
+thead,
+tfoot {
+    vertical-align: middle;
+}
+
+input,
+textarea,
+select {
+    vertical-align: middle;
+    -webkit-tap-highlight: rgba(0, 0, 0, 0);
+    color: #222;
+    font-size: 0.1455rem;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+::-moz-placeholder {
+    color: #999;
+}
+
+:-moz-placeholder {
+    color: #999;
+}
+::placeholder {
+    color: #999;
+}
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+menu {
+    list-style: none outside none;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+a {
+    color: #222;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    outline: none;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.fright {
+    float: right;
+}
+
+.fleft {
+    float: left;
+}
+
+.page-body {
+    padding: 0 15px;
+}
+
+.viewport {
+    width: 100%;
+    max-width: 750px;
+    min-width: 320px;
+    background: #f8f8f8;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin: 0.08rem 0;
+    overflow: hidden;
+}
+
+.header ul {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li {
+    width: 28%;
+    float: left;
+    margin: 0;
+    padding: 0.05rem 0;
+}
+
+.header ul li:nth-child(2) {
+    width: 44%;
+}
+
+.header ul li p {
+    width: 100%;
+    text-align: center;
+    font-size: 0.12rem;
+    font-weight: 400;
+    color: #a0a0a0;
+}
+
+.header ul li p.active {
+    color: #323232;
+}
+
+.header-tap {
+    width: 100%;
+    height: 0.25rem;
+    position: relative;
+}
+
+.header-tap i {
+    width: 0.35rem;
+    height: 0.25rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    margin-left: -0.175rem;
+    background-position: 0 0;
+    background-size: 100%;
+}
+
+.header-tap i.header-tap-doing {
+    background-position: 0 0.51rem;
+    background-size: 100%;
+}
+
+.header-tap i.header-tap-undone {
+    background-position: 0 0.27rem;
+    background-size: 100%;
+}
+
+.header-tap span {
+    display: block;
+    width: 50%;
+    height: 0.02rem;
+    background: #dfdfdf;
+    position: absolute;
+    top: 0.124rem;
+    z-index: 1;
+}
+
+.header-tap span.first {
+    left: 50%;
+}
