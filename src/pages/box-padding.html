@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>盒子内边距</title>
+    <style>
+        .box1{
+            width:200px;
+            height: 200px;
+            background-color: #bfa;
+            /*设置边框*/
+            border: 10px red solid;
+
+            /**内边距padding，指的是盒子内容区域与盒子边框之间的距离
+                一共有四个方向：padding-top，padding-right，padding-bottom，padding-left
+
+                元素的背景会延伸到内边距
+
+             */
+            padding-top: 100px; /*会改变盒子可见的大小*/
+        }
+
+
+
+        .box2{
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="box2">
+        元素的背景会延伸到内边距内，
+        所有这里为了区分内容区域，
+        让子元素宽高沾满父元素的内容区域
+    </div>
+<div>
+    盒子的宽度：border-left + padding-left  +width + padding-right+border-right
+</div>
+</div>
+
+</body>
+</html>

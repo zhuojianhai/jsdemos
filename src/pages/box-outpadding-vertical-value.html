@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    <title>盒子垂直外边距重合</title>
+    <style>
+
+        /**
+
+         */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin-bottom: 100px;
+        }
+        /**
+        垂直外边距的重合
+            --在网页中相邻的垂直外边距会发生外边距重合的问题
+                所谓的外边距重合指的是兄弟元素之间的相邻的外边距会取最大值，而不是取和
+                如果父子元素的垂直外边距相邻了，则子元素的外边距会设置给父元素
+         */
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin-top: 100px;
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+        .parentbox{
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+        }
+        .children{
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            background-color: pink;
+        }
+
+        .parentbox1{
+            width: 200px;
+            height: 200px;
+            background-color: lawngreen;
+            border: 1px solid #999999;
+
+        }
+        .children1{
+            width: 100px;
+            height: 100px;
+
+            margin-top: 100px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div class="box1"></div>
+    <div class="box2">上个元素是margin-bottom100px；当前元素是margin-top 100px，但显示的是100px</div>
+    <div class="box3"></div>
+<div>
+    下面例子展示垂直相邻元素外边距处理方式<br/>
+    方法一 给父元素增加一个元素值，或者padding，或者border属性值<br/>
+
+</div>
+    <div class="parentbox">
+
+        <div class="children"></div>
+    </div>
+
+    <div class="parentbox1">
+
+        <div class="children1"></div>
+    </div>
+</div>
+</body>
+</html>

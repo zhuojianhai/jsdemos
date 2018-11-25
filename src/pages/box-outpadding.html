@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>盒子外边距</title>
+    <style>
+        /**
+        当前盒子和其他盒子之间的距离，
+        调整盒子的位置
+        margin-top
+        margin-right
+        margin-bottom
+        margin-left
+
+
+由于页面中的元素都是靠左靠上摆放的，
+所以当我们设置上和左会导致盒子自身位置改变
+如果设置右和下外边距，会改变其他盒子的位置
+         */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            /**设置盒子的上外边距，盒子上边框和其他盒子的距离*/
+            margin-top: 100px;
+
+            /**设置盒子的上外边距，盒子上边框和其他盒子的距离*/
+            margin-left: 100px;
+
+            border:1px solid red;
+
+            margin-right: 200px;
+            margin-bottom: 100px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            border:1px solid gray;
+        }
+
+        .box3{
+            /*margin 可以设置为auto，auto一般设置水平方向
+            如果只给左外边距或者右外边距设置margin为auto则会将外边距这是为最大值
+            垂直方向margin为auto时，值为0
+
+            如果margin-left和margin-right 同时设置为auto，那么元素会在父元素种水平居中
+            */
+            width: 200px;
+            height: 200px;
+            margin-left: auto;
+            background-color: pink;
+
+        }
+        .box4{
+
+            width: 200px;
+            height: 200px;
+            /*如果margin-left和margin-right 同时设置为auto，那么元素会在父元素种水平居中*/
+            margin-left: auto;
+            margin-right: auto;
+            background-color: green;
+            border:1px solid #323232;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+
+</div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4">www</div>
+
+</body>
+<div>
+
+</div>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>内联元素盒子模型</title>
+    <style>
+        span{
+            background-color: green;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .s{
+            /*内联元素可以设置垂直方向的内边距，但是不会影响页面的布局*/
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .s1{
+            /**
+            盒子模型宽度=border-left+padding-left+width+padding-right+border-right
+            内容区，内边距，边框，外边距
+
+            内联元素设置宽高没有效果
+             */
+            width: 100px;
+            height: 100px;
+
+            /**内联元素可以设置水平方向上的内边距,会影响页面的布局*/
+            padding-left: 100px;
+            padding-right: 100px;
+
+
+
+
+            /***
+                内联元素可以设置边框，水平方方向影响页面布局，垂直方向不影响布局
+             */
+            border:100px solid bisque;
+
+            /*内联元素可以设置外边距，水平方向不会重叠，垂直方向会重叠*/
+            margin-right: 100px;
+        }
+        .s2{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span class="s">this is inner element box </span>
+    <span class="s1">this is inner element box </span>
+    <span class="s2">this is inner element box </span>
+    <span>this is inner element box </span>
+    <div class="box1"></div>
+</div>
+
+</body>
+</html>
