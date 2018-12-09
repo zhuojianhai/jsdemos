@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度塌陷解决方法</title>
+
+    <style>
+        .box1{
+            background-color: yellow;
+
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            float: left;
+        }
+
+
+        /**
+        解决高度塌陷方案二：
+        可以在高度塌陷的父元素的最后，添加一个空白的块级元素（div）
+        由于这个div并没有浮动，所以可以撑开父元素的高度
+        然后在进行清除浮动，这样可以通过这个空白的div来撑开父元素的高度
+            基本没有副作用
+         */
+
+        .clear{
+            clear: both;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="box2"></div>
+    <div class="clear"></div>
+
+</div>
+
+
+
+
+</body>
+</html>

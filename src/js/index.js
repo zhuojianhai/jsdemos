@@ -1,3 +1,13 @@
 !function(){
-  alert('this is init alert');
+
 }();
+
+
+function ajaxs() {
+
+  $.ajax({
+
+  })
+
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位</title>
+
+    <style>
+        .box1{
+            height: 200px;
+            background-color: #bbffaa;
+            position: relative;
+
+
+
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid cornflowerblue;
+            /**
+           定位
+               指定元素的任意位置
+               position：static，relative，absolute,fixed, sticky
+               static:默认值
+               relative:开启元素相对定位，相对于元素在文档流中的位置
+               absolute:
+               fixed:
+               sticky:
+
+
+               当元素设置position属性位置为Relative时候，则开启了元素的相对定位
+               1》当开启了元素相对定位以后，不设置偏移量，元素位置不会发生任何变化。
+               2》相对定位是相对元素在文档流中的原来位置进行定位的
+               3》相对定位的元素不会脱离文档流
+               4》相对定位会是元素提升一个层级
+               5》相对定位不会改变元素的性质，块元素还是块元素，内联元素还是内联元素
+            */
+            position:relative;
+
+            /**
+                当position属性值为非static值时候，就开启了元素定位
+                    left：元素相对于其定位位置的左侧偏移量，设置其值当前元素会向右移动
+                    right：元素相对于其定位位置的右侧偏移量，设置其值当前元素会向左侧移动
+                    top：元素相对于其定位位置的上部偏移量，设置其值当前元素会向下侧移动
+                    bottom：元素相对于其定位位置的底部偏移量，设置其值当前元素会向上侧移动
+
+                   通常偏移量是只要设置两个就好，left和right是互斥的，top和bottom也是互斥的
+                设置元素偏移量
+             */
+            left: 200px;
+            left: 100px;
+            top: 200px;
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+
+        }
+        .s1{
+            position: relative;
+            background-color: #ffc0cb;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<span class="s1">this is span </span>
+</body>
+</html>

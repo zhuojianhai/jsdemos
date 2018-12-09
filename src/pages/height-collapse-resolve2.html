@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度塌陷解决方法</title>
+
+    <style>
+        .box1{
+
+            border: 1px solid #cc0000;
+
+        }
+
+        .box2{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            /*受box1浮动影响，box2会整体往上移动
+            有时需要清除浮动对当前元素的影响，可以使用clear
+            clear可以用来清除其他元素，对当前元素的影响
+            clear值：
+                left：清除左侧浮动元素对当前元素的影响
+                right:清除右侧浮动元素对当前元素的影响
+                both：清除两侧浮动元素对当前元素的影响
+                        实际上是清除对当前元素影响最大的那个浮动元素
+                none
+
+            */
+        }
+
+
+
+
+        /**
+        解决高度塌陷方案二：
+        可以在高度塌陷的父元素内的最后，添加一个空白的块级元素（div）
+        由于这个div并没有浮动，所以可以撑开父元素的高度
+        然后在进行清除浮动，这样可以通过这个空白的div来撑开父元素的高度
+            基本没有副作用
+
+
+            这里使用after伪类，选中box1后边
+         */
+
+        /**以下是为了兼容IE6清除浮动代码开始*/
+        .clearfix{
+            zoom:1;
+        }
+        /**以下是为了兼容IE6清除浮动代码结束*/
+
+        .clearfix:after{
+            /*设置内容*/
+            content: "";
+            /**清除浮动影响*/
+            clear: both;
+            /*转换成块元素*/
+            display: block;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box1 clearfix">
+    <div class="box2">
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

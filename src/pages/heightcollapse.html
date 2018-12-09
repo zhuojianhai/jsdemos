@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度塌陷问题</title>
+
+    <style>
+        .box1{
+            border:10px red solid;
+            /**
+            元素都有一个隐含的属性 Block formatting context  简称BFC
+            默认是关闭的
+            开启BFC有如下特性：
+                1》父元素的垂直外边距不会和子元素重合
+                2》开启BFC的元素不会被浮动元素覆盖
+                3》开启BFC的元素可以包含浮动的子元素
+           如何开启BFC
+                  1》设置元素浮动                          -------
+                        导致父元素的宽度丢失，而且也会导致下面的元素上移动
+                  2》设置元素绝对定位                        -------
+                        导致父元素的宽度丢失，而且也会导致下面的元素上移动
+                  3》设置元素display为inline-block          -------
+                        可以解决，但会导致父元素的宽度丢失，而且也会导致下面的元素上移动，不推荐使用
+                  4》设置overflow的属性为非visible值
+
+                  推荐方式：将overflow设置为hidden是副作用最小的开启BFC的一种方式
+
+
+             */
+
+            /***
+            IE6及其以下浏览器不支持BFC
+            但是具有另一个隐藏属性叫做 HasLayout 该属性的作用和BFC作用一直
+            开启属性有许多方式，这里使用副作用最小的一种方式
+                    直接元素zoom设置为1： zoom：1
+            zoom 只在IE浏览器中支持
+             */
+            overflow: hidden;
+            zoom:1;
+
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            float: left;
+
+
+        }
+        .box3{
+            height: 100px;
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="box2">
+
+    </div>
+</div>
+<div class="box3">
+
+</div>
+</body>
+</html>

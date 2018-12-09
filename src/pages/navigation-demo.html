@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条练习</title>
+    <style>
+
+
+
+
+        .navigation{
+            list-style: none;
+            background-color: #fba;
+            /**
+            为元素指定了宽度，就开启了IE中的haslayout属性
+             */
+            width: 1000px;
+            margin: 0 auto;/*设置居中对齐*/
+            overflow: hidden;/*清除浮动影响，这里是开启BFC方式*/
+            zoom:1;/*清除浮动影响，这里是开启BFC方式，兼容IE6*/
+        }
+        .navigation-li{
+            float: left;
+            width: 25%;
+
+        }
+
+        .navigation-li-a{
+            display: inline-block;
+            width: 100%;
+            text-align: center; /*文字居中*/
+            padding: 5px 0px;  /*这是文字的高度**/
+            text-decoration: none; /*去除下划线*/
+            color: white;/*设置字体颜色*/
+            background-color: #bbffaa;
+            font-weight: bold;/*字体加粗*/
+
+        }
+
+        /*鼠标放置在a标签上高亮显示*/
+
+       .navigation-li-a:hover{
+           background-color: #cc0000;
+       }
+
+
+    </style>
+</head>
+<body>
+
+
+<ul class="navigation">
+    <li class="navigation-li"><a class="navigation-li-a" href="javascript:;">首页</a></li>
+    <li class="navigation-li"><a class="navigation-li-a" href="javascript:;">我的</a></li>
+    <li class="navigation-li"><a class="navigation-li-a" href="javascript:;">你好</a></li>
+    <li class="navigation-li"><a class="navigation-li-a" href="javascript:;">设置</a></li>
+</ul>
+</body>
+</html>
