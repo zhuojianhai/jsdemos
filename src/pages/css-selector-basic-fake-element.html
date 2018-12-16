@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+
+    <style>
+
+        p:first-letter{
+            font-size: 20px;
+        }
+
+        p:first-line{
+            background-color: #bbffaa;
+        }
+
+
+        /**
+        :before表示元素最前边部分
+        一般before需要结合 content一起使用
+
+         */
+        p:before{
+            content: "before";
+            color: red;
+
+        }
+
+        p:after{
+            content: "我是p：after内容";
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+<p>机构落实国家价格临时公告娄山关路机构落实国家价格临时公告娄山关路机构落实国家价格临时公告娄山关路机构落实国家价格临时
+    公告娄山关路机构落实国家价格临时公告娄山关路机构落实国家价格临时公告娄山关路机构落实国家价格临时公告娄山关路</p>
+</body>
+</html>

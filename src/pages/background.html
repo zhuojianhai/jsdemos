@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景设置</title>
+    <style>
+        .box1{
+
+            height: 500px;
+            width: 500px;
+            background-color: #bbffaa;
+            border: 1px solid #cc0000;
+            /**
+            1>如果背景图片大于元素，默认会显示图片左上角，
+            2>如果背景图片和元素一样大，就会全部显示图片
+            3>如果背景图片比元素小，默认背景图片会平铺在元素
+             */
+            background-image: url("../images/background.jpeg");
+        }
+        .box2{
+            height: 500px;
+            background-color: #bbffaa;
+            background-image: url("../images/t1.png");
+            /*背景图片在元素内重复样式处理*/
+            background-repeat: repeat-x;
+            /*background-repeat: repeat-y;*/
+            /*background-repeat: round;*/
+            /*background-repeat: space;*/
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box1">
+
+</div>
+<div class="box2">
+
+</div>
+<div></div>
+</body>
+</html>

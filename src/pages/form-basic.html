@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标单基本设置</title>
+</head>
+<body>
+<!--
+    表单的作用：
+        1》将用户的信息提交给远程服务器的
+        2》
+
+    form标签创建一个标签
+        必须制定一个action属性，指定服务器地址
+        当我们提交表单时候，会将form里的内容提交到action对应的服务器
+
+-->
+
+<form action="form-target.html" method="get">
+    <!--使用form创建的只是一个空白的表单
+        可以往表单中增加不同的表单项
+
+        使用input创建一个文本框，她的type是text
+        如果希望表单中数据会提交到服务器上，必须给表单元素增加一个name属性
+        name表示提交内容的名字
+
+        当method="get"时候
+        用户填写的信息会附录在url地址的后边，以查询字符串的形式发送给服务器
+        url问号 ?后边的查询字符串
+        格式：
+            属性名=属性值
+        -->
+
+    <label>姓名：</label><input type="text" name="userName" placeholder="请输入你的姓名"/>
+    <label>密码：</label><input type="password" name="password" plWaceholder="请输入你的密码"/>
+
+
+
+    <input type="submit" value="提交表单">
+</form>
+</body>
+</html>

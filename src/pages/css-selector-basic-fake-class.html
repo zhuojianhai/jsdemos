@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用css选择器伪类</title>
+
+    <style>
+
+
+        /**
+        伪类专门用来表示元素的一种特殊状态的
+            比如访问过的链接，比如普通的链接，比如获取文本焦点
+            当我们需要处理这些特殊状态的元素样式时候，就可以使用伪类
+
+         */
+
+
+        /*为未访问的链接设置颜色*/
+        a:link{
+            color: yellow;
+        }
+
+
+        /*
+        浏览器是通过浏览历史记录来判断是否访问过
+            由于涉及到用户隐私，使用visited只能设置字体颜色
+        */
+        a:visited{
+            color: #cc0000;
+        }
+
+        a:hover{
+            color: #bbffaa;
+        }
+
+        /**
+        active 表示链接被点击的状态
+         */
+        a:active{
+            color: #ffbbaa;
+        }
+
+
+        /**
+        :hover
+        :active
+        也可以为其他元素设置
+        */
+        p:hover{
+            background-color: #bbffaa;
+        }
+
+        p:active{
+            background-color: orange;
+        }
+
+        input:focus{
+            background-color: yellowgreen;
+        }
+
+        /***
+        为p选中内容设置样式
+         */
+        p::selection{
+            background-color: #bbffaa;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<!--
+    元素之间的关系
+        父元素：直接包含子元素的元素
+        子元素：直接被父元素包含的元素
+
+        祖先元素：直接或间接包含后代元素的元素，父元素也是祖先元素
+        后代元素：直接或间接被祖先元素包含的元素，子元素也是后代元素
+
+        兄弟元素：拥有相同父元素的元素
+ -->
+
+<div>
+   <a href="http://www.baidu.com">访问过的链接</a><br/><br/>
+   <a href="http://www.google.com">访问过的链接</a>
+</div>
+
+<p><span>我是div兄弟元素的span标签 </span></p>
+
+<div>
+    <input type="text" placeholder="请输入姓名"/>
+</div>
+
+<p>我是要测试选中文字效果的：：select</p>
+</body>
+</html>

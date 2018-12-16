@@ -20,6 +20,13 @@
             width: 200px;
             height: 200px;
             background-color: green;
+
+            /*
+            IE8 以下不支持,需要使用如下属性值
+            filter:alpha(30)
+            */
+            opacity: 0.3;
+            filter: alpha(opacity=30)；
         }
     </style>
 </head>

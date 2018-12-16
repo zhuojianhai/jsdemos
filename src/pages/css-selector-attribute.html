@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用css属性选择器</title>
+
+    <style>
+
+
+        /**
+        为所有具有title属性p元素设置一个背景颜色
+        属性选择器：
+            -作用 可以根据元素中的属性或者属性值来选取指定元素
+            -语法：
+                [属性名] 选取含有指定属性元素
+         */
+
+        p[title]{
+            background-color: #bbffaa;
+        }
+
+        p[title='hello']{
+            background-color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--
+    title 属性，这个属性可以给任何标签指定
+    当鼠标移入到元素上时候，元素中的title属性值将会作为提示文字显示
+-->
+<p title="hello">我是一个段落的具体内容</p>
+<p>我是一个段落的具体内容</p>
+<p>我是一个段落的具体内容</p>
+<p>我是一个段落的具体内容</p>
+<p>我是一个段落的具体内容</p>
+<p>我是一个段落的具体内容</p>
+<p title="我是title的文字">我是一个段落的具体内容</p>
+</body>
+</html>

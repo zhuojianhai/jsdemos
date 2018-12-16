@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标单基本设置</title>
+</head>
+<body>
+<!--
+    表单的作用：
+        1》将用户的信息提交给远程服务器的
+        2》
+
+    form标签创建一个标签
+        必须制定一个action属性，指定服务器地址
+        当我们提交表单时候，会将form里的内容提交到action对应的服务器
+
+-->
+
+<form action="form-target.html" method="get">
+    <!--使用form创建的只是一个空白的表单
+        可以往表单中增加不同的表单项
+
+        使用input创建一个文本框，她的type是text
+        如果希望表单中数据会提交到服务器上，必须给表单元素增加一个name属性
+        name表示提交内容的名字
+
+        当method="get"时候
+        用户填写的信息会附录在url地址的后边，以查询字符串的形式发送给服务器
+        url问号 ?后边的查询字符串
+        格式：
+            属性名=属性值
+        -->
+
+
+    <!--
+     在html中提供一个标签，专门来选择表单中的文字
+      label标签
+      label可以指定一个for属性，该属性的值需要指定一个表单项的id值
+
+    -->
+    <label for="username">姓名：</label><input id="username" type="text" name="userName" placeholder="请输入你的姓名"/><br/>
+    <label>密码：</label><input type="password" name="password" plWaceholder="请输入你的密码"/><br/>
+
+    <!--
+        --input 创建一个单选按钮，她的type属性是 radio
+        --单选按钮通过name属性进行分组，name属性相同就是一组按钮
+        --用户选择不需要直接填写的内容表单项
+                还必须指定value属性，这样被选中的表单项的value值会被传给后台服务器
+        -- 如果希望单选按钮或者多选按钮有个默认的选项，
+            只要在对应的选项上增加 checked="checked"即可
+    -->
+
+    <label>性别</label>
+        <input type="radio" name="gender"  value="male" checked="checked"/>男
+        <input type="radio" name="gender" value="female"/>女<br/>
+
+    <!---多选框
+        --使用input创建一个多选框，他的type属性使用checkbox
+     -->
+
+    <label>爱好</label>
+        <input type="checkbox" name="hobby" value="1"/>足球
+        <input type="checkbox"  name="hobby" value="2" checked="checked"/>篮球
+        <input type="checkbox"  name="hobby" value="3"/>羽毛球
+        <input type="checkbox"  name="hobby" value="4"/>游泳
+        <input type="checkbox"  name="hobby" value="5"/>滑冰
+        <input type="checkbox"  name="hobby" value="6"/>乒乓球
+    <br/>
+
+    <!--
+    下来列表
+    select
+        select 中使用option作为选择项
+        下拉列表的name值需要指定给select，value 给option
+        在option中可增加selected属性为 selected="selected"
+        为下拉列表增加 multiple="multiple"，则下拉列表为多选下拉列表
+    -->
+
+    <lable>喜欢明星</lable>
+    <select name="star">
+        <!--
+            在select中，可以使用optgroup对选项进行分组
+            同一个optgroup中的option是一组
+            可以通过lable属性给组设置组名
+        -->
+
+        <optgroup label="美女">
+
+            <option value="1" > 范冰冰 </option>
+            <option value="2" selected="selected"> 范岛爱</option>
+            <option value="3"> 波多野结衣 </option>
+            <option value="4"> 一本道 </option>
+            <option value="4"> 苍井空 </option>
+        </optgroup>
+
+        <optgroup label="帅哥">
+            <option value="4"> 赵本山 </option>
+            <option value="4"> 冠希哥 </option>
+        </optgroup>
+
+    </select>
+    <br/>
+
+
+    <label>自我介绍</label>
+    <textarea placeholder="请输入自我介绍" name="introduce">
+
+    </textarea>
+    <br/>
+
+    <input type="submit" value="提交表单"/><br/>
+    <input type="reset" value="重置表单"/><br/>
+    <input type="button" value="我是单纯按钮"/><br/>
+    <br/>
+
+
+    <!--
+        除了使用input也可以使用button按钮
+    -->
+
+
+    <button type="submit">我是button创建的submit类型按钮</button>
+    <button type="reset">我是button创建的reset类型按钮</button>
+    <button type="button">我是button创建的button类型按钮</button>
+</form>
+</body>
+</html>

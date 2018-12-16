@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完善清除浮动</title>
+    
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: #bbffaa;
+
+            
+        }
+
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+
+            /*
+            子元素和父元素相邻的，垂直的外边距会发生重叠。
+            子元素的外边距会传递给父元素
+            使用空的table标签，可以隔离父子元素的外边距，阻止外边距重叠
+
+            */
+            
+            margin-top: 100px;
+        }
+
+
+        /**
+        解决父子元素的外边距重叠
+         */
+        .box1:before{
+            content: "";
+
+            /*diplay:table  可以将一个元素设置为表格显示*/
+            display: table;
+        }
+
+        /***
+        解决父元素受浮动元素影响，导致高度塌陷
+         */
+        .clear-fix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+        /**
+        经修改过后的clear-fix 是一个多功能的
+        既可以解决高度塌陷，又可以确保父元素和子元素垂直外边距不会重叠
+         */
+        .clear-fix-:before,
+        .clear-fix-:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*兼容IE*/
+        .clear-fix-{
+            zoom:1;
+        }
+
+
+
+
+
+        .box3{
+            width: 300px;
+            height: 300px;
+            background-color: #bbffaa;
+
+
+        }
+
+
+
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+
+            /*
+            子元素和父元素相邻的，垂直的外边距会发生重叠。
+            子元素的外边距会传递给父元素
+
+            */
+
+            margin-top: 100px;
+        }
+
+        .box5{
+            border: 1px solid #bbffaa;
+            background-color: yellow;
+        }
+        .box6{
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="box1">
+    <div class="box2">
+        
+    </div>
+</div>
+
+<div class="box3">
+    <div class="box4">
+
+    </div>
+</div>
+
+<div class="box5">
+    <div class="box6"></div>
+</div>
+</body>
+</html>
