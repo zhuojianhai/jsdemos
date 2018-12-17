@@ -1,0 +1,13 @@
+!function(){
+
+}();
+
+
+function ajaxs() {
+
+  $.ajax({
+
+  })
+
+
+}
